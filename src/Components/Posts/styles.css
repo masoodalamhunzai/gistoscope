@@ -389,7 +389,7 @@
   color: #000;
 }
 .post-info .post-content span {
-  color: #000 !important;
+  color: #000;
   font-size: 14px;
   margin: 0 5px;
   cursor: pointer;
@@ -401,6 +401,6 @@
 .slider-container .post-info .post-icon .icon {
   padding-left: 10px;
 }
-.not-found{
-  color:#5b5b5b !important;
-  }
+.not-found {
+  color: #5b5b5b !important;
+}
