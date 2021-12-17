@@ -1,0 +1,34 @@
+.comment-component {
+  border-top: 1px solid #eaeaec;
+}
+
+.comment-date {
+  margin-right: 32px;
+}
+
+.comment-link-text {
+  font-size: 12px;
+}
+
+.comment-date-time {
+  padding-left: 100%;
+  font-size: 15px;
+}
+
+.comment-input-styles {
+  width: 70%;
+  border-top-left-radius: 23px;
+  border-bottom-left-radius: 23px;
+}
+
+.comment-button-styles {
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+}
+.avatar-header .ant-comment-avatar {
+  margin-right: 6px !important;
+}
+.avatar-header .ant-avatar ,.ant-comment-avatar img {
+  width: 50px !important;
+    height: 50px !important;
+}

@@ -1,0 +1,28 @@
+.signup-spinner {
+  font-size: 30;
+  color: #ff3e6c;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.signup-heading {
+  font-size: 20px;
+  font-weight: 680;
+  color: #424553;
+}
+
+.signup-button {
+  height: 41px;
+  background: #11131d;
+  color: white;
+}
+.signup-link {
+  color: #ff5a5a;
+  font-weight: 700;
+  padding-left: 6px;
+}

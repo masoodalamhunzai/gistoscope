@@ -1,0 +1,19 @@
+.admins-loading {
+  font-size: 30;
+  color: #ff3e6c;
+}
+
+.admins-top-margin {
+  margin-top: 50vh;
+}
+
+.admins-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+
+.admins-image-file-left-margin {
+  margin-left: 120px;
+}

@@ -1,0 +1,98 @@
+.ipost-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ipost-back-button-wrapper {
+  position: fixed;
+  top: 20vh;
+  left: 23px;
+  height: 32px;
+  width: 33px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.ipost-back-icon {
+  font-size: 23px;
+  margin-top: -2px;
+  margin-left: 3px;
+}
+
+.ipost-title-container {
+  margin-bottom: 0px;
+  position: relative;
+  border-top-right-radius: 170px;
+  border-top-left-radius: 17px;
+}
+
+.ipost-title {
+  background: rgba(0, 119, 182, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.ipost-summary {
+  background: rgba(72, 202, 228, 1);
+}
+
+.ipost-body {
+  background: white;
+  border: 1px solid gray;
+  border-top: none;
+}
+
+.ipost-author-container {
+  margin-top: 6px;
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.ipost-date-container {
+  display: flex;
+  float: right;
+  margin-top: -40px;
+}
+
+.ipost-bottom-icons {
+  display: flex;
+  margin-left: 21px;
+}
+
+.ipost-message-outlined-icon {
+  margin-top: -10px;
+  vertical-align: middle;
+}
+
+.ipost-commentbox-input {
+  width: 80%;
+  border-radius: 23px;
+}
+
+.ipost-commentbox-button {
+  background: rgba(52, 144, 220, 1);
+  color: white;
+  border: 1px solid rgba(52, 144, 220, 1);
+  border-radius: 21.5px;
+  position: absolute;
+  right: 106px;
+  top: 4px;
+  width: 20%;
+}
+
+.ipost-postbox-button {
+  background: rgba(72, 202, 228, 1);
+  color: white;
+  border: 1px solid rgba(72, 202, 228, 1);
+  border-radius: 21.5px;
+  position: absolute;
+  right: 106px;
+  top: 4px;
+  width: 20%;
+}

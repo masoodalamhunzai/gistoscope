@@ -1,0 +1,31 @@
+.tree-form-container {
+  display: grid;
+  place-items: center;
+  overflow: auto;
+  padding-bottom: 32px;
+}
+
+.tree-input-wrapper {
+  width: 460px;
+}
+
+.tree-submit-button {
+  width: 200px;
+}
+
+.tree-loader {
+  font-size: 30;
+  color: #ff3e6c;
+}
+
+.tree-spinner-wrapper {
+  margin-top: 50vh;
+}
+
+.tree-button-wrapper {
+  margin-top: 100px;
+}
+
+.tree-text-editor-styles {
+  height: 260px;
+}

@@ -1,0 +1,32 @@
+.login-container {
+  padding-top: 36px;
+  height: 100vh;
+}
+
+.login-spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+.login-heading {
+  font-size: 20px;
+  font-weight: 680;
+  color: #424553;
+}
+
+.login-button {
+  height: 41px;
+  background: #11131d;
+  color: white;
+}
+
+.login-link {
+  color: #ff5a5a;
+  font-weight: 620;
+}
+
+.login-spinner {
+  font-size: 30;
+  color: #ff3e6c;
+}

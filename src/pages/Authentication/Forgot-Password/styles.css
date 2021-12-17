@@ -1,0 +1,36 @@
+/**
+*   Send Reset Password
+*/
+.reset-container {
+  height: 100vh;
+}
+
+.reset-sub-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-top-height {
+  height: 41px;
+}
+
+.reset-top-padding {
+  padding-top: 15vh;
+}
+
+/**
+*   Update Password
+*/
+.update-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-top-padding {
+  padding-top: 20vh;
+}
+.update-button-height {
+  height: 41px;
+}

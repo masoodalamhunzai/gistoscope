@@ -1,0 +1,49 @@
+/*
+--------------------------------------------------------
+--------------- styles for sidebar -------------
+--------------------------------------------------------
+*/
+.sidebar-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10%;
+}
+.sidebar-wrapper .title h4 {
+  background: #0077b6;
+  text-align: center;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 8px;
+  box-shadow: 0 0 35px #d4d4f7;
+}
+.sidebar-item ul {
+  box-shadow: 0 0 35px #d4d4f7;
+  padding-left: 0;
+}
+.sidebar-item ul li {
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  transition: all linear 0.3s;
+  cursor: pointer;
+}
+.sidebar-item ul li:last-child {
+  border-bottom: 0;
+}
+.sidebar-item ul li a {
+  font-size: 16px;
+  color: #000000;
+  transition: all linear 0.3s;
+  font-weight: 500;
+}
+.sidebar-item ul li:hover {
+  background: #d8fae7;
+  cursor: pointer;
+}

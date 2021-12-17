@@ -1,0 +1,84 @@
+/*
+-----------------------------------------------------
+---- Styles for Post Components --------
+-----------------------------------------------------
+*/
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.post-inner {
+  padding: 18px 15px;
+}
+.post-head {
+  padding-bottom: 16px;
+}
+.PostUser {
+  display: flex;
+}
+.user-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.user-photo img {
+  object-fit: cover;
+  width: 100%;
+}
+.user-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0b0b0b;
+}
+.user-info p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0b0b0b;
+}
+.user-act select {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.post-header {
+  background: #48c8e3;
+  padding: 1.5rem 1rem;
+}
+.post-header p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #daf1f8;
+  margin-bottom: 0;
+}
+.post-info .post-content {
+  margin-left: 1rem;
+}
+.post-info .post-content p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 0px;
+}
+.post-info .post-content > a {
+  cursor: pointer;
+  color: #3490dc;
+  font-size: 14px;
+  transition: all linear 0.3s;
+}
+.post-info .post-content > a:hover {
+  color: #000;
+}
+.post-info .post-content span {
+  color: #3490dc;
+  font-size: 14px;
+  margin: 0 5px;
+}
+.post-info .post-icon {
+  display: flex;
+  justify-content: end;
+}
+.post-info .post-icon .icon {
+  padding-left: 10px;
+}

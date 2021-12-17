@@ -1,0 +1,27 @@
+/* style for post header component */
+.header-top{
+    margin: 0 auto;
+    background: #0277B6;
+    padding:18px 15px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+.header-top h5{
+   color: #E8F2F8;
+   font-weight: 600;
+   font-size: 16px;
+   font-family: 'Poppins', sans-serif;
+}
+/* add */
+
+.post-header{
+    background: #48C8E3;
+    padding:10px 15px;
+    margin-top: .5rem;
+}
+.post-header p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #daf1f8;
+}

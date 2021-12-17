@@ -1,0 +1,46 @@
+.admin-loader {
+  font-size: 30;
+  color: #ff3e6c;
+}
+
+.admin-spinner-wrapper {
+  margin-top: 50vh;
+}
+
+.admin-image-container {
+  padding-left: 23px;
+  margin-top: 100px;
+  margin-bottom: 32px;
+}
+
+.admin-delete-outline {
+  padding-left: 180px;
+}
+
+.admin-image {
+  margin-left: 120px;
+}
+
+.admin-input-warpper {
+  padding-left: 23px;
+}
+
+.admin-button-wrapper {
+  padding-left: 23px;
+  margin-top: 32px;
+}
+
+.admin-input {
+  margin-bottom: 32px;
+}
+
+.admin-drawer-title {
+  margin-bottom: 0px;
+  font-weight: bolder;
+  margin-top: 19px;
+}
+
+.admin-drawer-heading {
+  margin-top: 80px;
+  font-weight: bold;
+}

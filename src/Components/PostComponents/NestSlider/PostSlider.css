@@ -1,0 +1,180 @@
+.SlderWrapper {
+  /* padding:0 5rem; */
+  background: none;
+}
+.SliderItem {
+  background: #fff;
+  border: 1px solid rgba(104, 104, 104, 0.46);
+  box-shadow: 0px 2px 27px 6px rgba(104, 104, 104, 0.46);
+  border-radius: 5px;
+}
+.comments {
+  width: 30%;
+  color: #3490dc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+}
+.replies {
+  border: 1px solid #595959;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  max-width: 100%;
+  width: 16%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.replies > p {
+  margin-left: 0 !important;
+}
+.Edit,
+.Version {
+  width: 23%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center !important;
+  border: 1px solid #818181;
+  border-radius: 5px;
+  align-items: center;
+  padding: 2px 5px;
+}
+.Version {
+  width: 25%;
+}
+.EditLeftArr,
+.EditRightArr {
+  outline: 0;
+  color: #0277b6;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.VerLeftArr,
+.VerRightArr {
+  outline: 0;
+  color: #3ec175;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+/* Post Activity CSS */
+.post-activity {
+  padding: 1rem 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e5e5e5;
+  color: #000;
+}
+.post-activity .user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.post-activity p {
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.activity-left {
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.activity-right {
+  display: flex;
+  align-items: center;
+  width: 35%;
+}
+.comments img {
+  display: inline-block;
+  margin-left: 5px;
+}
+.comments > p {
+  font-size: 12px !important;
+  display: inline-block;
+  margin-left: 5px;
+}
+.comments > p > span {
+  margin-left: 3px;
+}
+.edit span {
+  font-size: 14px;
+}
+.edit img {
+  width: 20px;
+  margin-right: 2px;
+}
+.write-post {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post-activity input {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #c4c4c4;
+  font-size: 12px;
+  width: 15rem;
+  outline: none;
+}
+.activity-right button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  outline: none;
+  background: #3bcdeb;
+  padding: 8px 15px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  cursor: pointer;
+}
+svg {
+  margin-top: 0 !important;
+}
+/*responsive style*/
+@media only screen and (max-width: 710px) {
+  .post-activity {
+    flex-direction: column;
+  }
+  .activity-left,
+  .activity-right {
+    width: 99%;
+    margin-bottom: 10px;
+  }
+  .edit {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 505px) {
+  .header-top,
+  .header-bottom p {
+    text-align: center;
+  }
+  .replies {
+    width: 40%;
+    text-align: center;
+  }
+  .user-info h4 {
+    font-size: 15px;
+  }
+}

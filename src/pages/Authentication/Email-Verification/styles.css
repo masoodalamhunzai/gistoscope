@@ -1,0 +1,28 @@
+/**
+* Confirmation Email Styles
+*/
+
+.confirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+}
+
+.confirmation-button {
+  background: black;
+  color: #ffffff;
+  margin-top: 23px;
+}
+
+/**
+*  Send Verification Email Styles
+*/
+
+.verification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+  align-content: center;
+}

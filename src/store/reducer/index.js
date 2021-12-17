@@ -1,0 +1,5 @@
+export {default as postReducer} from './post-reducer'
+export {default as userReducer} from './user-reducer'
+export {default as commentReducer} from './comment.reducer'
+export {default as treeReducer} from './tree-reducer'
+export {default as adminReducer} from './admin-reducer'

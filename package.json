@@ -1,0 +1,86 @@
+{
+  "name": "gistoscope",
+  "version": "1.0.0",
+  "homepage": "https://gistoscope.com",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "antd": "^4.16.0",
+    "axios": "^0.21.1",
+    "dompurify": "^2.2.9",
+    "interactjs": "^1.10.11",
+    "jsdom": "^9.12.0",
+    "moment": "^2.29.1",
+    "prop-types": "^15.7.2",
+    "quill-emoji": "^0.2.0",
+    "quill-image-resize-module-react": "^3.0.0",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-d3-tree": "^2.0.4",
+    "react-d3-tree-wrapped": "^1.16.3",
+    "react-dom": "^17.0.2",
+    "react-draggable": "^4.4.3",
+    "react-draggable-3d": "^0.0.1",
+    "react-froala-wysiwyg": "^4.0.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
+    "react-interactjs": "^0.1.2",
+    "react-motion": "^0.5.2",
+    "react-organizational-chart": "^2.1.0",
+    "react-quill": "^1.3.5",
+    "react-redux": "^7.2.5",
+    "react-responsive-modal": "^6.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-scroll-up": "^1.3.7",
+    "react-select": "^4.3.1",
+    "react-slick": "^0.28.1",
+    "react-st-modal": "^1.1.3",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "shortid": "^2.2.16",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^7.3.1",
+    "uuid": "^8.3.2",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "format": "prettier --write --ignore-path .gitignore \"**/*.+(js|json)\"",
+    "format:check": "prettier --list-different --ignore-path .gitignore \"**/*.+(js|json)\"",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+    "validate": "npm run format:check && npm run lint && npm run test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "ignorePatterns": "node_modules/**/*"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "dotenv": "^4.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.26.0",
+    "prettier": "^2.4.1"
+  }
+}

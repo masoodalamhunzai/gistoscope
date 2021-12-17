@@ -1,0 +1,483 @@
+/******************************************************************* Global Styles ***************************************************************/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  width: 100% !important;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+
+body button,
+body a {
+  cursor: pointer !important;
+}
+.App {
+  background-color: #f1f5f4 !important;
+  overflow: hidden;
+}
+/******************************************************************* Navbar ***************************************************************/
+nav a {
+  text-decoration: none;
+  color: black !important;
+  margin-right: 23px;
+}
+.ant-comment-actions {
+  margin-top: 2px !important;
+}
+
+.navbar {
+  display: flex;
+  align-items: left;
+  color: black;
+  line-height: 60px;
+}
+
+.navbar .logo a {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+.navbar .logo a:hover {
+  color: #777777;
+}
+
+/******************************************************************* Tree-Menu ***************************************************************/
+.future-tree .parent-Evthng p {
+  background: rgba(56, 193, 114, 0.08);
+  border: 1px solid rgb(56, 193, 114);
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#myList div {
+  background: rgba(56, 193, 114, 0.08);
+  border: 1px solid rgb(56, 193, 114);
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#myList {
+  display: none;
+}
+
+/********************************************************** Login / Signup *******************************************************************/
+.form {
+  background: linear-gradient(to bottom, #1f2426 20%, #101213);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form .form-inner {
+  border-radius: 34px;
+  margin-top: 20px;
+  background: white;
+  width: 36%;
+  padding: 100px;
+  padding-top: 30px;
+}
+
+.form-control:focus {
+  border-color: #d0d1d8 !important;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.anticon img,
+svg {
+  vertical-align: text-top !important;
+}
+
+/*************************************************************** Create Post ********************************************************************/
+.create-post .ant-input {
+  height: 43px !important;
+  width: 100%;
+}
+
+.create-posts .form .form-inner .ant-input-affix-wrapper {
+  width: 100%;
+  /* padding: 2px 10px 10px 2px !important; */
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.form .ant-form-item-children-icon {
+  top: 43% !important;
+}
+
+.post-checkboxes .ant-checkbox-wrapper {
+  margin-bottom: 6px;
+}
+
+.right-links a {
+  display: block;
+  padding-bottom: 8px;
+  color: red;
+}
+
+.bottom-icons .anticon {
+  margin-left: 10px;
+}
+
+.editor p {
+  width: 400px !important;
+}
+.ql-size-small {
+  width: '100px';
+}
+
+.single-comment .ant-comment {
+  width: 600px !important;
+}
+
+.ant-layout-sider {
+  background: #fff !important;
+}
+
+.ant-menu-root {
+  height: 100vh;
+}
+
+.active-side .ant-menu-item {
+  background: violet !important;
+}
+
+.containersFlex {
+  display: flex;
+  width: fit-content;
+  padding-bottom: 45px !important;
+}
+.containersFlexMain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+#flex-scroll {
+  display: flex;
+  width: auto;
+  clear: both;
+}
+
+.box {
+  margin-right: 20px;
+  width: 660px;
+}
+
+/******************************************************************* Tree-Page ***************************************************************/
+.Tree a {
+  font-size: 10px;
+}
+
+.Tree ul li:nth-of-type(even) a {
+  background: #000;
+}
+
+.Tree .ant-dropdown-link {
+  display: inline-block;
+}
+
+.Tree {
+  text-align: center;
+}
+.Tree .css-x1kkml {
+  display: inline-block;
+}
+
+.Tree .css-oalq6z {
+  display: inline-block;
+}
+
+.css-n4cq1w {
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+}
+
+/******************************************************************* Draggable-Posts ***************************************************************/
+.text #content {
+  overflow: hidden;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.react-draggable {
+  margin-bottom: 1rem !important;
+}
+.comment-box .ant-comment-inner {
+  padding: 0px !important;
+}
+
+body.react-draggable-transparent-selection {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/******************************************************************* User-Page ***************************************************************/
+.card-bottom-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-bottom-icons .anticon img,
+svg {
+  vertical-align: text-bottom !important;
+  margin-top: 6px;
+  border-radius: 19px;
+}
+
+.moderator-icons .anticon {
+  font-size: 21px;
+  margin-right: 15px;
+}
+
+.users-page-select .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: rgba(242, 249, 255, 1) !important;
+  border-radius: 5px;
+  height: 40px;
+  width: 121px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: rgba(0, 119, 182, 1);
+}
+
+.users-page-select .ant-select-arrow {
+  top: 47%;
+  color: rgba(0, 119, 182, 1);
+  font-weight: 600;
+}
+
+.stf__dialogClose svg {
+  vertical-align: top !important;
+  margin-top: 0px;
+}
+
+
+/************************************************************ Media Queries *********************************************************************/
+
+@media (max-width: 768px) {
+  .logo {
+    border-right: 0px !important;
+    padding-right: 0px !important;
+  }
+  .subject-name {
+    width: 200px !important;
+  }
+  .navbar-collapse {
+    margin-left: 36px;
+  }
+
+  .future-tree {
+    display: none;
+  }
+  .react-draggable {
+    width: 90% !important;
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .react-draggable p {
+    font-size: 15px !important;
+  }
+  .react-draggable h6 {
+    font-size: 15px !important;
+  }
+  .react-draggable .ant-comment-content-author-name > div {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+  }
+  .react-draggable .ant-comment-content-detail {
+    font-size: 10px !important;
+    font-weight: 700 !important;
+  }
+  .react-draggable .card-bottom-icons {
+    margin-left: 0px !important;
+  }
+  .react-draggable .card-bottom-icons div {
+    display: inline-block;
+    width: 96px !important;
+    margin: 0px !important ;
+    justify-content: center;
+  }
+  .react-draggable .card-bottom-icons .anticon-message {
+    display: none !important;
+  }
+  .react-draggable .card-bottom-icons p span,
+  .react-draggable .card-bottom-icons a {
+    font-size: 8px !important;
+    font-weight: 700 !important;
+    text-align: center;
+    padding: 0px !important;
+    margin: 2px !important;
+  }
+  .react-draggable .card-bottom-icons .anticon {
+    font-size: 10px !important;
+    font-weight: 700 !important;
+  }
+
+  .react-draggable .card-bottom-icons .comment-box div {
+    width: auto !important;
+  }
+
+  .react-draggable .card-bottom-icons .comment-box button {
+    display: none !important;
+  }
+  .react-draggable .card-bottom-icons .comment-box .ant-comment-avatar {
+    display: none !important;
+  }
+  .react-draggable .card-bottom-icons .comment-box input {
+    width: 90px !important;
+    margin-right: 20px !important;
+  }
+
+  .user-details {
+    width: 100vw !important;
+    margin-right: 0px !important;
+  }
+  .users-page .row {
+    --bs-gutter-x: 0rem !important;
+  }
+
+  .comment-row .col-md-6 button {
+    right: 60px !important;
+  }
+  .individual-post .ant-comment {
+    height: auto !important;
+  }
+
+  .single-comment input {
+    width: 20% !important;
+  }
+
+  .form {
+    background: linear-gradient(to bottom, #1f2426 20%, #101213);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form .form-inner {
+    border-radius: 34px;
+    margin-top: 20px;
+    background: white;
+    width: 100%;
+    padding: 41px;
+    padding-top: 30px;
+  }
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 769px) {
+  .individual-post .post-container {
+    width: 95% !important;
+  }
+
+  .individual-post .reply-btn {
+    /* width: 40% !important; */
+    float: none !important;
+    display: block;
+    border: none !important;
+  }
+
+  .individual-post .ant-comment {
+    height: 41px !important;
+  }
+  .individual-post .time {
+    font-size: 10px !important;
+  }
+  .individual-post .description {
+    margin-top: 0px !important;
+  }
+  .individual-post .bottom-icons {
+    margin-top: 80px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    box-shadow: 2px 10px 2px 2px rgba(180, 176, 176, 0.08);
+    box-shadow: 0 12px 12px 0 rgb(0 0 0 / 5%);
+  }
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .navbar li a {
+    display: block;
+    padding: 0 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .react-draggable {
+    width: 100% !important;
+  }
+
+  .future-tree {
+    width: 260px !important;
+    border-right: none !important;
+  }
+  .future-tree > div {
+    width: 200px !important;
+  }
+  .user-details {
+    width: 200px !important;
+    margin-left: 0px !important;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .react-draggable {
+    width: 90vw !important;
+  }
+
+  .future-tree {
+    width: 200px !important;
+    border-right: none !important;
+    margin-right: 10px;
+  }
+  .future-tree > div {
+    width: 200px !important;
+    margin-left: 0px !important;
+  }
+
+  .user-details {
+    width: 200px !important;
+    margin-left: 0px !important;
+  }
+}
