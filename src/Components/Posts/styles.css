@@ -389,7 +389,7 @@
   color: #000;
 }
 .post-info .post-content span {
-  color: #000;
+  color: #000 !important;
   font-size: 14px;
   margin: 0 5px;
   cursor: pointer;
