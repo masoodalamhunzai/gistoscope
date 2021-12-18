@@ -25,32 +25,31 @@ export const Signup = () => {
   }
 
   const handleSignup = async value => {
-    console.log(file, 'file check')
-    const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/
+    // console.log(file, 'file check')
+    // const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/
 
-    const isOk = re.test(value.password)
-    if (!isOk) {
-      message.error({
-        content: 'Password must contain min 8 characters, 1 capital, 1 small, 1 number',
-        style: {
-          marginTop: '20vh',
-        },
-      })
-    } else {
-      window.scrollTo(0, 0)
-      setLoading(true)
+    // const isOk = re.test(value.password)
+    // if (!isOk) {
+    //   message.error({
+    //     content: 'Password must contain min 8 characters, 1 capital, 1 small, 1 number',
+    //     style: {
+    //       marginTop: '20vh',
+    //     },
+    //   })
+    // } else {
+    window.scrollTo(0, 0)
+    setLoading(true)
 
-      const data = new FormData()
-      data.append('firstName', value.firstName)
-      data.append('lastName', value.lastName)
-      data.append('email', value.email)
-      data.append('username', value.username)
-      data.append('password', value.password)
-      data.append('confirm', value.confirm)
-      // data.append('file', file)
-
-      dispatch(signupUserAction(data, message, history))
-    }
+    const data = new FormData()
+    data.append('firstName', value.firstName)
+    data.append('lastName', value.lastName)
+    data.append('email', value.email)
+    data.append('username', value.username)
+    data.append('password', value.password)
+    data.append('confirm', value.confirm)
+    // data.append('file', file)
+    dispatch(signupUserAction(data, message, history))
+    // }
   }
 
   const antIcon = <LoadingOutlined className="signup-spinner" spin />

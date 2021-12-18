@@ -1,19 +1,19 @@
 /**
  * Tree Page Create new Post Model
  */
-import React, { useState } from 'react'
-import { message, Spin } from 'antd'
-import { useDispatch, useSelector } from 'react-redux'
-import { ConsoleSqlOutlined, LoadingOutlined } from '@ant-design/icons'
+import React, {useState} from 'react'
+import {message, Spin} from 'antd'
+import {useDispatch, useSelector} from 'react-redux'
+import {ConsoleSqlOutlined, LoadingOutlined} from '@ant-design/icons'
 import moment from 'moment'
-import ReactQuill, { Quill } from 'react-quill'
+import ReactQuill, {Quill} from 'react-quill'
 import ImageResize from 'quill-image-resize-module-react'
 import Modal from 'antd/lib/modal/Modal'
 
 import toolbarContainer from '../text-editor-styles'
 
 import 'react-quill/dist/quill.snow.css'
-import { createNewPostAction } from '../../store/actions/tree-action'
+import {createNewPostAction} from '../../store/actions/tree-action'
 
 Quill.register('modules/imageResize', ImageResize)
 
@@ -30,7 +30,7 @@ export const PostModal = React.memo(props => {
     summary: '',
   })
 
-  const { title, summary } = postData
+  const {title, summary} = postData
 
   const handlePostChange = e => {
     setPostData({
@@ -58,12 +58,6 @@ export const PostModal = React.memo(props => {
   const submitHandler = async e => {
     e.preventDefault()
     setLoading(true)
-    // const data = new FormData()
-    // data.append('title', title)
-    // data.append('summary', summary)
-    // data.append('description', description)
-    // data.append('subjectId', subjectId)
-    // data.append('timeOfPost', moment().format('dddd, MMMM Do YYYY, h:mm:ss a'))
     const data = {
       title,
       summary,

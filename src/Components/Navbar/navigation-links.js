@@ -2,9 +2,9 @@
  * Navbar Navigation Links
  */
 import * as React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-function NavigationLinks({ user }) {
+function NavigationLinks({user}) {
   return (
     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
       <li>
@@ -12,11 +12,6 @@ function NavigationLinks({ user }) {
           Home
         </Link>
       </li>
-      {/* <li>
-        <Link className="navLINK" aria-current="page" to="/post">
-          Post
-        </Link>
-      </li> */}
       <li>
         <Link className="navLINK" aria-current="page" to="/tree">
           New post

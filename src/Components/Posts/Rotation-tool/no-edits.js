@@ -1,8 +1,4 @@
-/**
- * Rotation component for Non Loggedin User
- */
 import React, {useState, useEffect, useRef} from 'react'
-import {Fragment} from 'react'
 import {
   CheckCircleFilled,
   FlagFilled,
@@ -11,8 +7,7 @@ import {
 } from '@ant-design/icons'
 import {Button, Comment, Input, Dropdown, Menu} from 'antd'
 import Avatar from 'antd/lib/avatar/avatar'
-import moment from 'moment'
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import {SingleComment} from '../../Comments/PostComments/SingleComment'
 import {ReplyComment} from '../../Comments/PostComments/ReplyComment'
 import PostReply from './reply-form'
@@ -35,8 +30,6 @@ function NoEdits({
   updateIndex,
   index,
   disabled,
-  mainPostTopSpacing,
-  mainPostSpacing,
   setShow,
   show,
   setSuccess,
@@ -118,6 +111,7 @@ function NoEdits({
     setShowEdit(edit)
     setShowVersion(version)
   }
+
   const EditSlider = {
     dots: false,
     infinite: false,

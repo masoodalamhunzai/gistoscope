@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import {DeleteOutlined, LoadingOutlined} from '@ant-design/icons'
 import {Drawer, Col, Row, Spin, message, Form, Input, Button} from 'antd'
@@ -232,12 +232,12 @@ export const Users = props => {
                     Submit
                   </Button>
                   <div className="px-5 mt-4">
-                    <Link
+                    <span
                       onClick={() => setIsModalVisible(true)}
                       className="btn submit-btn bg-white border-secondary text-dark font-weight-bolder"
                     >
                       Change Passsword
-                    </Link>
+                    </span>
                   </div>
                   <PasswordChangeModel
                     isModalVisible={isModalVisible}
