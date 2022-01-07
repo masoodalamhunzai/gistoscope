@@ -307,14 +307,18 @@ function NoEdits({
             className={comments?.comments.length > 10 ? `ml-4 comments-section` : 'ml-4 '}
           >
             {comments?.comments?.map((comment, index) => {
-              return success === comment?.postId ? (
+              console.log(comment, 'comment')
+              return success === comment?.dataValues?.postId ? (
                 <React.Fragment key={index}>
                   <SingleComment
-                    comment={comment}
-                    postId={post?.id}
+                    comment={comment.dataValues}
+                    postId={comment.dataValues?.postId}
                     refreshFunction={updateComponent}
                   />
-                  {comment.commentId === comment?.responseTo && (
+                  {/* {comment.commentId === comment?.responseTo && ( */}
+                  {/* {comment.replies.map((reply) => {
+                    return (
+                      
                     <div style={{marginLeft: '100px'}}>
                       <ReplyComment
                         CommentList={comment}
@@ -323,7 +327,9 @@ function NoEdits({
                         postId={post?.id}
                       />
                     </div>
-                  )}
+                    )
+                  })} */}
+                  {/* )} */}
                 </React.Fragment>
               ) : null
             })}

@@ -53,6 +53,7 @@ export const SingleComment = props => {
       )
     }
   }
+  console.log(props, 'props')
   return (
     <React.Fragment>
       <div className="single-comment">

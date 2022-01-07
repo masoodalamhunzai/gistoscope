@@ -38,8 +38,8 @@ export const Home = props => {
   const [loading, setLoading] = useState(true)
   const [form] = Form.useForm()
   const { filteringPosts, subjects, commentToggle } = useSelector(state => state.post)
-  // const state = useSelector(state => state)
-  // console.log(state, "state")
+  const state = useSelector(state => state)
+   console.log(state, "state")
   const [commentValue, setCommentValue] = useState('')
   const [success, setSuccess] = useState('')
   const [show, setShow] = useState(false)
@@ -139,7 +139,7 @@ export const Home = props => {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                   <div className="containersFlexMain">
-                                    <div className="home-relative-position" >
+                                    <div className="home-relative-position">
                                         <RightSidePosts
                                           filterPosts={filterPosts}
                                           postIndex={postIndex}
