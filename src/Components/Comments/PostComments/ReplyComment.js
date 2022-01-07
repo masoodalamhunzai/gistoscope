@@ -14,21 +14,20 @@ export const ReplyComment = props => {
     <React.Fragment>
       <span>
         {props?.CommentList.map(reply => (
-          <>
-            <Comment
-              className="comment-component"
-              actions={[<CommentAction key={reply.commentId} comment={reply} />]}
-              content={<p>{reply.text}</p>}
-              datetime={
-                <CommentDateTime
-                  refreshFunction={props?.refreshFunction}
-                  comment={reply}
-                  postId={reply?.postId}
-                  user={user}
-                />
-              }
-            />
-          </>
+          <Comment
+            key={reply.id}
+            className="comment-component"
+            actions={[<CommentAction key={reply.commentId} comment={reply} />]}
+            content={<p>{reply.text}</p>}
+            datetime={
+              <CommentDateTime
+                refreshFunction={props?.refreshFunction}
+                comment={reply}
+                postId={reply?.postId}
+                user={user}
+              />
+            }
+          />
         ))}
       </span>
     </React.Fragment>
