@@ -19,7 +19,7 @@ function CommentDateTime({comment, user, postId, refreshFunction}) {
    * Delete comment from database
    */
   const commentDeleteHanlder = async () => {
-    const data = {postId, commentId: comment.commentId}
+    const data = {postId, commentId: comment?.commentId}
     dispatch(deleteCommentAction(data, refreshFunction, user))
   }
 
