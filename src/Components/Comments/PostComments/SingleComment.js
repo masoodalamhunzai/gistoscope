@@ -9,7 +9,6 @@ import {Button, Comment, Input, message, Avatar, Form} from 'antd'
 import CommentAction from '../comment-actions'
 import CommentDateTime from '../comment-date-time'
 import {createNewCommentAction} from '../../../store/actions/comment-action'
-
 import '../styles.css'
 
 export const SingleComment = props => {
@@ -53,6 +52,15 @@ export const SingleComment = props => {
       )
     }
   }
+  const handleHideReplyPostForm = () => {
+    setTimeout(() => {
+      setOpenReply(false)
+    }, 1000)
+    setTimeout(() => {
+      props.handleGetComments(props?.postId)
+    }, 2000)
+  }
+
   return (
     <React.Fragment>
       <div className="single-comment">
@@ -87,7 +95,14 @@ export const SingleComment = props => {
             avatar={<Avatar src={user?.userPicture} alt={user?.username} />}
             content={
               <Fragment>
-                <Form form={form} name="Comment" onFinish={handleSingleCommentSubmit}>
+                <Form
+                  form={form}
+                  name="Comment"
+                  onFinish={() => {
+                    handleSingleCommentSubmit()
+                    handleHideReplyPostForm()
+                  }}
+                >
                   <Form.Item onChange={e => setCommentValue(e.target.value)}>
                     <Input className="comment-input-styles" value={commentValue} />
                     <Button className="comment-button-styles" htmlType="submit">

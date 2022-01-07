@@ -298,7 +298,7 @@ function NoEdits({
             handleCommentChange={handleCommentChange}
             handleCommentSubmit={handleCommentSubmit}
             post={post}
-            handleGetComments={() => handleGetComments(post?.id)}
+            handleGetComments={handleGetComments}
           />
         )}
 
@@ -313,6 +313,7 @@ function NoEdits({
                     comment={comment}
                     postId={comment?.postId}
                     refreshFunction={updateComponent}
+                    handleGetComments={handleGetComments}
                   />
                   {comment?.replies && (
                     <div style={{marginLeft: '100px'}}>
