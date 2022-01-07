@@ -8,8 +8,10 @@ import moment from 'moment'
  */
 export const getPostsAction = () => async dispatch => {
   try {
-    dispatch({ type: ActionTypes.POST_START })
-    const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/post/get?skip=0&limit=100`)
+    dispatch({type: ActionTypes.POST_START})
+    const res = await axios.get(
+      `${process.env.REACT_APP_BASE_URL}/api/post/get?skip=0&limit=100`,
+    )
     // console.log(res, 'getPostsAction')
     if (res.status === 200) {
       dispatch({
@@ -18,7 +20,7 @@ export const getPostsAction = () => async dispatch => {
       })
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.POST_ERROR, payload: error })
+    dispatch({type: ActionTypes.POST_ERROR, payload: error})
   }
 }
 
@@ -28,17 +30,17 @@ export const getPostsAction = () => async dispatch => {
  */
 export const getMainSubjectsAction = () => async dispatch => {
   try {
-    dispatch({ type: ActionTypes.POST_START })
+    dispatch({type: ActionTypes.POST_START})
 
     const res = await axios.get(
       `${process.env.REACT_APP_BASE_URL}/api/subject/get/flat-array?skip=0&limit=100`,
     )
     if (res.status === 200) {
       // console.log(res, 'flat-array')
-      dispatch({ type: ActionTypes.POST_SUBJECT_SUCCESS, payload: res.data })
+      dispatch({type: ActionTypes.POST_SUBJECT_SUCCESS, payload: res.data})
     }
   } catch (error) {
-    dispatch({ type: ActionTypes.POST_ERROR, error: error?.data?.errorMessage })
+    dispatch({type: ActionTypes.POST_ERROR, error: error?.data?.errorMessage})
   }
 }
 
@@ -51,9 +53,7 @@ export const getMainSubjectsAction = () => async dispatch => {
  */
 export const handleCommentSubmitAction =
   (id, isAuthenticated, commentValue) => async dispatch => {
-
     try {
-
       const res = await axios.post(
         `${process.env.REACT_APP_BASE_URL}/api/posts/comments/main-post/create`,
         {
@@ -92,13 +92,13 @@ export const handleCommentSubmitAction =
  */
 export const editPostAction =
   (postId, setPostData, setDescription, message) => async dispatch => {
-    dispatch({ type: ActionTypes.POST_START })
+    dispatch({type: ActionTypes.POST_START})
 
     await axios
       .get(`${process.env.REACT_APP_BASE_URL}/api/post/get/post/${postId}`)
       .then(res => {
         if (res.status === 200) {
-          dispatch({ type: ActionTypes.POST_EDIT_SUCCESS })
+          dispatch({type: ActionTypes.POST_EDIT_SUCCESS})
           setPostData(res.data)
           setDescription(res.data.description)
         } else {
@@ -123,7 +123,7 @@ export const editPostAction =
  */
 export const createNewPostAction =
   (data, message, refreshFunction, setIsModalVisible, onModelOpen) => async dispatch => {
-    dispatch({ type: ActionTypes.POST_START })
+    dispatch({type: ActionTypes.POST_START})
 
     await axios
       .post(`${process.env.REACT_APP_BASE_URL}/api/post/edits/create`, data, {
@@ -133,9 +133,9 @@ export const createNewPostAction =
       })
       .then(res => {
         if (res.status === 200) {
-          dispatch({ type: ActionTypes.POST_CREATE_SUCCESS })
+          dispatch({type: ActionTypes.POST_CREATE_SUCCESS})
           message.success({
-            content: "Updated post successfully",
+            content: 'Updated post successfully',
             style: {
               marginTop: '20vh',
             },
@@ -161,21 +161,23 @@ export const createNewPostAction =
  * @returns void
  */
 export const getMainSubjects = (setSubjects, message) => async dispatch => {
-  dispatch({ type: ActionTypes.POST_START })
+  dispatch({type: ActionTypes.POST_START})
 
-  await axios.get(`${process.env.REACT_APP_BASE_URL}/api/subject/get?skip=0&limit=100`).then(res => {
-    if (res.status === 200) {
-      dispatch({ type: ActionTypes.POST_END })
-      setSubjects(res.data)
-    } else {
-      message.error({
-        content: res.data.errorMessage,
-        style: {
-          marginTop: '20vh',
-        },
-      })
-    }
-  })
+  await axios
+    .get(`${process.env.REACT_APP_BASE_URL}/api/subject/get?skip=0&limit=100`)
+    .then(res => {
+      if (res.status === 200) {
+        dispatch({type: ActionTypes.POST_END})
+        setSubjects(res.data)
+      } else {
+        message.error({
+          content: res.data.errorMessage,
+          style: {
+            marginTop: '20vh',
+          },
+        })
+      }
+    })
 }
 
 /**
@@ -188,13 +190,13 @@ export const getMainSubjects = (setSubjects, message) => async dispatch => {
  */
 export const getPostByIdAction =
   (postId, setPostData, setDescription, message) => async dispatch => {
-    dispatch({ type: ActionTypes.POST_START })
+    dispatch({type: ActionTypes.POST_START})
 
     axios
       .get(`${process.env.REACT_APP_BASE_URL}/api/post/get/post/${postId}`)
       .then(res => {
         if (res.status === 200) {
-          dispatch({ type: ActionTypes.POST_END })
+          dispatch({type: ActionTypes.POST_END})
           setPostData(res.data)
           setDescription(res.data.description)
         } else {
@@ -216,7 +218,7 @@ export const getPostByIdAction =
  * @returns void
  */
 export const createEditPostAction = (data, setLoading, message) => async dispatch => {
-  dispatch({ type: ActionTypes.POST_START })
+  dispatch({type: ActionTypes.POST_START})
 
   axios
     .post(`${process.env.REACT_APP_BASE_URL}/api/post/create`, data, {
@@ -226,10 +228,10 @@ export const createEditPostAction = (data, setLoading, message) => async dispatc
     })
     .then(res => {
       if (res.status === 200) {
-        dispatch({ type: ActionTypes.POST_CREATE_SUCCESS })
+        dispatch({type: ActionTypes.POST_CREATE_SUCCESS})
         setLoading(false)
         message.success({
-          content: "post has been created successfully",
+          content: 'post has been created successfully',
           style: {
             marginTop: '20vh',
           },
@@ -256,7 +258,7 @@ export const createEditPostAction = (data, setLoading, message) => async dispatc
  */
 export const replyToPostAction =
   (data, message, refreshFunction, setIsModalVisible, onModelOpen) => async dispatch => {
-    dispatch({ type: ActionTypes.POST_START })
+    dispatch({type: ActionTypes.POST_START})
 
     axios
       .post(`${process.env.REACT_APP_BASE_URL}/api/post/replies/post`, data, {
@@ -266,9 +268,9 @@ export const replyToPostAction =
       })
       .then(res => {
         if (res.status === 200) {
-          dispatch({ type: ActionTypes.POST_CREATE_SUCCESS })
+          dispatch({type: ActionTypes.POST_CREATE_SUCCESS})
           message.success({
-            content: "Post created successfully",
+            content: 'Post created successfully',
             style: {
               marginTop: '20vh',
             },
@@ -278,7 +280,7 @@ export const replyToPostAction =
           onModelOpen(false)
         } else {
           message.success({
-            content: "error occur",
+            content: 'error occur',
             style: {
               marginTop: '20vh',
             },
@@ -296,7 +298,7 @@ export const replyToPostAction =
  */
 export const createMainPostAction =
   (data, updateData, setCommentValue) => async dispatch => {
-    dispatch({ type: ActionTypes.POST_START })
+    dispatch({type: ActionTypes.POST_START})
 
     await axios
       .post(
@@ -310,7 +312,7 @@ export const createMainPostAction =
       )
       .then(res => {
         if (res.status === 200) {
-          dispatch({ type: ActionTypes.CREATE_MAIN_POST_SUCCESS })
+          dispatch({type: ActionTypes.CREATE_MAIN_POST_SUCCESS})
           updateData(res.data)
           setCommentValue('')
         }
@@ -327,7 +329,7 @@ export const createMainPostAction =
  */
 export const getIndividualPostAction =
   (postId, setPost, setDescription, message) => async dispatch => {
-    dispatch({ type: ActionTypes.POST_START })
+    dispatch({type: ActionTypes.POST_START})
 
     await axios
       .get(`${process.env.REACT_APP_BASE_URL}/api/post/get/post/${postId}`)
@@ -363,7 +365,10 @@ export const submitCommentAction = (data, getPost, setCommentValue) => async dis
     })
     .then(res => {
       if (res.status === 200) {
-        dispatch({ type: ActionTypes.COMMENT_CREATED_SUCCESS, payload: [res?.data?.comment] })
+        dispatch({
+          type: ActionTypes.COMMENT_CREATED_SUCCESS,
+          payload: [res?.data?.comment],
+        })
         getPost()
         setCommentValue('')
       }
@@ -382,36 +387,36 @@ export const submitCommentAction = (data, getPost, setCommentValue) => async dis
  */
 export const createANewPostVersion =
   (data, refreshFunction, onModelOpen, setLoading, setIsModalVisible, message) =>
-    async dispatch => {
-      dispatch({ type: ActionTypes.POST_START })
-      axios
-        .post(`${process.env.REACT_APP_BASE_URL}/api/post/versions/create`, data, {
-          headers: {
-            authorization: 'Bearer ' + localStorage.getItem('token'),
-          },
-        })
-        .then(res => {
-          if (res.status === 200) {
-            setLoading(false)
-            message.success({
-              content: "Version created successfully",
-              style: {
-                marginTop: '20vh',
-              },
-            })
-            refreshFunction(true)
-            setIsModalVisible(false)
-            onModelOpen(false)
-          } else {
-            message.success({
-              content: res.data.errorMessage,
-              style: {
-                marginTop: '20vh',
-              },
-            })
-          }
-        })
-    }
+  async dispatch => {
+    dispatch({type: ActionTypes.POST_START})
+    axios
+      .post(`${process.env.REACT_APP_BASE_URL}/api/post/versions/create`, data, {
+        headers: {
+          authorization: 'Bearer ' + localStorage.getItem('token'),
+        },
+      })
+      .then(res => {
+        if (res.status === 200) {
+          setLoading(false)
+          message.success({
+            content: 'Version created successfully',
+            style: {
+              marginTop: '20vh',
+            },
+          })
+          refreshFunction(true)
+          setIsModalVisible(false)
+          onModelOpen(false)
+        } else {
+          message.success({
+            content: res.data.errorMessage,
+            style: {
+              marginTop: '20vh',
+            },
+          })
+        }
+      })
+  }
 
 export const getSubjectsByIdAction = (id, renderChild) => async dispatch => {
   axios
